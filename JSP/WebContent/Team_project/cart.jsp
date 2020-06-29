@@ -15,12 +15,12 @@
 	Context initCtx = new InitialContext();
 
 	//2. DataSource 객체 생성
-	DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/jsphh");
+	DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/jsPSK");
 	
 	//3. CP에서 connection 가져오기
 	Connection con =  ds.getConnection();
 	
-	String sql = "SELECT * FROM CART";
+	String sql = "SELECT P.NAME FROM CART C INNER JOIN PRODUCT P ON C.PRODUCT_ID = P.PRODUCT_ID";
 	Statement st = con.createStatement();
 	
 	ResultSet rs = st.executeQuery(sql);
@@ -61,8 +61,6 @@
              	    	<%
 											while(rs.next()){
 											String name = rs.getString("NAME");
-											int price = rs.getInt("PRICE");
-											String brand = rs.getString("BRAND");
 											%>
                         <td data-th="Product">
                             <div class="row">
@@ -71,11 +69,11 @@
                                 </div>
                                 <div class="col-md-9 text-left mt-sm-2">
                                     <h4><%=name %></h4>
-                                    <p class="font-weight-light"><%=brand %></p>
+                                    <p class="font-weight-light"></p>
                                 </div>
                             </div>
                         </td>
-                        <td data-th="Price"><%=price %></td>
+                        <td data-th="Price"></td>
                         <td data-th="Quantity">
                             <input type="number" class="form-control form-control-lg text-center" value="1">
                         </td>

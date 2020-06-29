@@ -1,5 +1,16 @@
+<%@page import="java.sql.Clob"%>
+<%@page import="java.io.InputStream"%>
+<%@page import="java.io.OutputStream"%>
+<%@page import="java.sql.Blob"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="javax.sql.DataSource"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="javax.naming.InitialContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +25,12 @@
 </head>
 <body>
 		<jsp:include page='header.jsp' flush='false'/>
-		<jsp:include page='main.jsp' flush='false'/>
+
+	
+		<jsp:include page='cart.jsp' flush='false'/>
+
+
 		<jsp:include page='footer.jsp'  flush='false'/>
+
 </body>
 </html>

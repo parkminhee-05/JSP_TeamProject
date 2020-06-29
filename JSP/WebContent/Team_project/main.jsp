@@ -6,21 +6,7 @@
 <%@page import="javax.naming.InitialContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	//1. Context객체 생성
-	Context initCtx = new InitialContext();
 
-	//2. DataSource 객체 생성
-	DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/jsphh");
-	
-	//3. CP에서 connection 가져오기
-	Connection con =  ds.getConnection();
-	
-	String sql = "SELECT * FROM PRODUCT";
-	Statement st = con.createStatement();
-	
-	ResultSet rs = st.executeQuery(sql);
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -105,34 +91,34 @@
 		    <div class="row">
 		      <div class="col-lg-4 mb-4">
 		        <div class="card h-100">
-		          <h4 class="card-header">Card Title</h4>
+		          <h4 class="card-header">강아지 / 개</h4>
 		          <div class="card-body">
-		            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+		            <p class="card-text">강형욱 급으로 개를 잘 알고싶으신가요?? 그렇다면 본 컨텐츠를 이용하여 많은 지식을 습득하실 수 있습니다.</p>
 		          </div>
 		          <div class="card-footer">
-		            <a href="#" class="btn btn-primary">Learn More</a>
+		            <a href="#" class="btn btn-primary">바로가기</a>
 		          </div>
 		        </div>
 		      </div>
 		      <div class="col-lg-4 mb-4">
 		        <div class="card h-100">
-		          <h4 class="card-header">Card Title</h4>
+		          <h4 class="card-header">엄선된 상품</h4>
 		          <div class="card-body">
-		            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+		            <p class="card-text">너무 많은 반려동물의 상품들. 저희가 엄선된 상품만 추려 게시해 놓았습니다. 구매는 해당 사이트로 이동하여 구매해주세요!</p>
 		          </div>
 		          <div class="card-footer">
-		            <a href="#" class="btn btn-primary">Learn More</a>
+		            <a href="#" class="btn btn-primary">바로가기</a>
 		          </div>
 		        </div>
 		      </div>
 		      <div class="col-lg-4 mb-4">
 		        <div class="card h-100">
-		          <h4 class="card-header">Card Title</h4>
+		          <h4 class="card-header">고양이</h4>
 		          <div class="card-body">
-		            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+		            <p class="card-text">길가다가 갑자기 간택되어서 어쩔줄 모르시겠다구요?? 일단 들어와봐요.<br> 정보들이 여기에 다 있습니다.</p>
 		          </div>
 		          <div class="card-footer">
-		            <a href="#" class="btn btn-primary">Learn More</a>
+		            <a href="#" class="btn btn-primary">바로가기</a>
 		          </div>
 		        </div>
 		      </div>
@@ -146,31 +132,20 @@
           <div class="divider-custom-line"></div>
         </div>
 		    <div class="row">
-	    	<%
-						while(rs.next()){
-							String name = rs.getString("NAME");
-					%>
+
 		      <div class="col-lg-4 col-sm-6 portfolio-item">
 		        <div class="card h-100">
 		          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
 		          <div class="card-body">
 		            <h6 class="card-title">
-		              <a href="#"><%=name %></a>
+		              <a href="#"></a>
 		            </h6>
 		          </div>
 		        </div>
 		      </div>
-				<% }
-				con.close();
-				st.close();
-				rs.close();
-				%>    
-		    </div>
 
-		    
+		    </div>
     </div>
     </section>
-
-	   
 </body>
 </html>

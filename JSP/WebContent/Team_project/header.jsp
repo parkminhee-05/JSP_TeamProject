@@ -10,51 +10,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style type="text/css">
-  	.navbar{
-  		min-height:10px;
-  	}
-  	.nav{
-  		font-size : 10px;
-  		color : gray;
-  	}
-  	.jumbotron{
-  		margin-bottom : 0;
-  	}
-		.navbar-expand-lg,
-		.navbar-expand-md,
-		.navbar-expand-sm,
-		.navbar-expand-xl {
-		  > .container,
-		  > .container-fluid {
-		    padding-left: 15px;
-		    padding-right: 15px;
-		    @media (max-width: 575px) {
-		      padding-left: 0;
-		      padding-right: 0;
-		    }
-		  }
-		}
-		.nav-item{
-			font-size: 12px;
-		}
-		.jumbotron{
-			background-color: #FFFFFF;
-		}
-		.dropdown:hover>.dropdown-menu {
-  	  display: block;
-		}
-		.dropdown-toggle::after {
-    display:none;
-		}
-		
-		@media all and (min-width: 992px) {
-			.navbar{ padding-top: 0; padding-bottom: 0; }
-			.navbar .has-megamenu{position:static!important;}
-			.navbar .megamenu{left:0; right:0; width:100%; padding:20px;  }
-			.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
-		}
-  </style>
+<style>
+.navbar{
+	min-height:10px;
+}
+.nav{
+	font-size : 10px;
+	color : gray;
+}
+.jumbotron{
+	background-color: #FFFFFF;
+	margin-bottom : 0;
+}
+
+.nav-item{
+	font-size: 12px;
+}
+.dropdown:hover>.dropdown-menu {
+	  display: block;
+}
+.dropdown-toggle::after {
+  display:none;
+}
+
+@media all and (min-width: 992px) {
+	.navbar{ padding-top: 0; padding-bottom: 0; }
+	.navbar .has-megamenu{position:static!important;}
+	.navbar .megamenu{left:0; right:0; width:100%; padding:20px;  }
+	.navbar .nav-link{ padding-top:1rem; padding-bottom:1rem;  }
+}
+</style>
 <title>개냥이</title>
 </head>
 <body>
@@ -100,9 +85,9 @@
        </div>
      </div>
   </nav>
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid" style=" margin-bottom : 0; background:#ffffff">
 	  <div class="row text-center" style="width: 100%">
-			<div style="width: 30%; float:none; margin:0 auto" >
+			<div style="width: 30%; float:none; margin:0 auto;" >
 			  <div class="container">
 			    <h1><b>개냥이</b></h1>      
 			  </div>

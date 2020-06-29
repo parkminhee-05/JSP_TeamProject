@@ -15,7 +15,7 @@
 	Context initCtx = new InitialContext();
 
 	//2. DataSource 객체 생성
-	DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/jsphh");
+	DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/jsPSK");
 	
 	//3. CP에서 connection 가져오기
 	Connection con =  ds.getConnection();
